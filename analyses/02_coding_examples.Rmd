@@ -15,9 +15,9 @@ knitr::opts_chunk$set(echo = TRUE)
 In this script, it performs noticeably better if you can use the ollama models. To do so, you will need to download ollama: https://ollama.com/
 
 Then, open your computer's terminal, and run:
-> ollama pull deepseek-r1:7b
-> ollama pull phi3:3.8b
-> ollama pull deepseek-r1:1.5b
+ollama pull deepseek-r1:7b
+ollama pull phi3:3.8b
+ollama pull deepseek-r1:1.5b
 
 This will download the model weights locally to your computer. You will then be able to access them from python using langchain. 
 

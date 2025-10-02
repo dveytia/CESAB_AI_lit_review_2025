@@ -109,6 +109,8 @@ test_ds  = Dataset.from_pandas(test_df)
 
 ```
 
+## Define evaluation metrics
+
 ```{python Define evaluation metrics}
 
 metric_accuracy = evaluate.load("accuracy")
