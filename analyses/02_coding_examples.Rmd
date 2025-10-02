@@ -180,8 +180,8 @@ prompt_Location = ChatPromptTemplate.from_messages(
             
             ## Examples:
             
-            example_text: "A study was conducted in Montpellier, France in 2025"
-            example_assistant: {{'location': "Hawaii", 'year': "2025"}}
+            example_text: "A study was conducted in France in 2025"
+            example_assistant: {{'location': "France", 'year': "2025"}}
             
             """
         ),
@@ -214,7 +214,7 @@ print(result_structured.model_dump())
 
 
 
-```{python parsing multi-label classification}
+```{python parsing multi-label classification - skip if too long}
 
 # Two or more distinct models
 class ShipPressure(BaseModel):
@@ -420,7 +420,7 @@ print(result)
 
 # Example 3: Code using a pre-trained classification model
 
-Explore models available on HuggingFace 
+Explore models available on [HuggingFace](https://huggingface.co/models) 
 
 ```{python using a pretrained model for text classification - sentiment analysis}
 sentiment_text = "Conserving blue carbon ecosystems can help prevent emissions that would have been released into the atmosphere from their degredation."
