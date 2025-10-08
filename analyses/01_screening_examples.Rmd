@@ -207,9 +207,9 @@ trainer.train()
 metrics = trainer.evaluate()
 print("Evaluation metrics:", metrics)
 
-# Save fine-tuned model
-model.save_pretrained("./data/derived-data/finetuned_distilbert_biodiv")
-tokenizer.save_pretrained("./data/derived-data/finetuned_distilbert_biodiv")
+# # Save fine-tuned model
+# model.save_pretrained("./data/derived-data/finetuned_distilbert_biodiv")
+# tokenizer.save_pretrained("./data/derived-data/finetuned_distilbert_biodiv")
 ```
 
 

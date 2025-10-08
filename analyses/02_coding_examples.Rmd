@@ -47,7 +47,30 @@ if(env_exists){
   
  
 }
+```
 
+
+```{r some helper code to double-check your environment}
+# check installed packages
+py_list_packages(
+  envname = "lit_review",
+  type = c("auto", "virtualenv", "conda")
+)
+
+# check locations of environments
+virtualenv_starter() 
+
+# # try miniconda if previous installation code does not work
+# reticulate::install_miniconda()
+# reticulate::conda_create("lit_review", python_version = "3.9.4", packages = c("transformers==4.55.2", "torch==2.8.0", "datasets==4.0.0", "scikit-learn==1.6.1","evaluate==0.4.5","accelerate>=0.26.0", "langchain==0.3.27","langchain-core==0.3.74","typing","langchain-huggingface==0.3.1","langchain-ollama==0.3.6","faiss-cpu==1.12.0"))
+# reticulate::use_condaenv("lit_review", required = TRUE)
+
+```
+
+```{python check python interpreter}
+import sys
+print(sys.version) # version
+print(sys.executable) # location
 
 ```
 
@@ -75,7 +98,7 @@ model2 = HuggingFacePipeline(pipeline=pipe)
 
 ```{python even better -- use an ollama model}
 from langchain_ollama.llms import OllamaLLM
-model1 = OllamaLLM(model="deepseek-r1:7b", temperature=0.2)
+model1 = OllamaLLM(model="deepseek-r1:1.5b", temperature=0.2)
 model2 = OllamaLLM(model="phi3:3.8b", temperature=0.2)
 ```
 
@@ -424,6 +447,8 @@ Explore models available on [HuggingFace](https://huggingface.co/models)
 
 ```{python using a pretrained model for text classification - sentiment analysis}
 sentiment_text = "Conserving blue carbon ecosystems can help prevent emissions that would have been released into the atmosphere from their degredation."
+
+sentiment_text = "Conserving blue carbon ecosystems is a great solution to climate change."
 
 # Topic
 topic_path = f"cardiffnlp/tweet-topic-latest-multi"
